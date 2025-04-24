@@ -1,5 +1,5 @@
 TEXFILES := $(shell find entries -name '*.tex')
-OUTDIR := site/entries
+OUTDIR := docs/entries
 
 all: $(TEXFILES)
 	mkdir -p $(OUTDIR)
