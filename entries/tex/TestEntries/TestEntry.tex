@@ -1,4 +1,37 @@
 \documentclass{article}
+\usepackage{amsmath}
+
+\ifdefined\HCode%
+   \def\pgfsysdriver{pgfsys-dvisvgm4ht.def}%
+\fi%
+
+\usepackage{tikz-cd}
+
 \begin{document}
 Hello, \LaTeX!
+
+\section{This is a fine section!}
+A great section! In fact, it contains some inline mathematics such as $\hbar = \frac{h}{2\pi}$. But it does also contains some seperated math blocks!
+\begin{equation}
+    i \hbar \frac{\partial}{\partial t} \Psi = \hat{H} \Psi
+\end{equation}
+
+\subsection{An even finer subsection}
+This subsection tops of above section by providing some examplary diagrams, rendered using Tikz! \\
+
+\begin{minipage}[t]{1.0\textwidth}  
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{tikzcd}
+            F \arrow[rd, "id_F"] \arrow[r, "F \eta"] & FGF \arrow[d, "\varepsilon F"] \\
+            & F
+            \end{tikzcd}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{tikzcd}
+            GFG \arrow[d, "G \varepsilon"]   &   G \arrow[l, "\eta G"] \arrow[ld, "id_G"] \\
+            G &
+        \end{tikzcd}
+    \end{minipage}
+\end{minipage}
+
 \end{document}
