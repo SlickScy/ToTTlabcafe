@@ -1,0 +1,242 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head> <title>Categories</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='Category.css' rel='stylesheet' type='text/css' /> 
+<meta content='Category.tex' name='src' /> 
+</head><body>
+   <div class='maketitle'>
+                                                                                   
+
+                                                                                   
+                                                                                   
+
+                                                                                   
+
+<h2 class='titleHead'>Categories</h2>
+ <div class='author'></div><br />
+<div class='date'><span class='cmr-12'>April 28, 2025</span></div>
+   </div>
+   <div align='center' class='minipage' id='minipage0' style='border:0px solid black;'><div class='tcolorbox tcolorbox' id='tcolobox-1'>     
+<div class='tcolorbox-title'>
+</div> 
+<div class='tcolorbox-content'><h3 class='likesectionHead' id='contents'><a id='x1-1000'></a>Contents</h3>
+<div class='tableofcontents'>
+<span class='sectionToc'>1 <a href='#definition' id='QQ2-1-2'>Definition</a></span>
+<br /><span class='sectionToc'>2 <a href='#foundational-issues' id='QQ2-1-3'>Foundational issues</a></span>
+<br /><span class='sectionToc'>3 <a href='#size-issues' id='QQ2-1-4'>Size issues</a></span>
+<br /><span class='sectionToc'>4 <a href='#examples' id='QQ2-1-5'>Examples</a></span>
+</div> 
+</div> 
+</div>                                                    </div> 
+
+<!-- l. 39 --><p class='noindent'>
+</p>
+   <h3 class='sectionHead' id='definition'><span class='titlemark'>1   </span> <a id='x1-20001'></a>Definition</h3>
+   <div class='newtheorem'>
+<!-- l. 40 --><p class='noindent'><span class='head'>
+<a id='x1-2001r1'></a>
+<span class='cmbx-10'>Definition 1.1.</span>  </span> A <span class='cmbx-10'>category </span><span class='cmsy-10'>𝒞 </span>consists of </p>
+     <ul class='itemize1'>
+     <li class='itemize'>a <span class='cmbx-10'>collection </span>(ToDo: Add discussion of Foundational Size issues) <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>0</span></sub> of <span class='cmbx-10'>objects</span>;
+     </li>
+     <li class='itemize'>for each pair <span class='cmmi-10'>X,Y </span>of objects a collection <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>) of <span class='cmbx-10'>morphisms from </span><span class='cmmi-10'>X </span><span class='cmbx-10'>to </span><span class='cmmi-10'>Y </span>;
+     </li>
+     <li class='itemize'>for each pair of morphisms <span class='cmmi-10'>f </span>in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>) and <span class='cmmi-10'>g </span>in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>Y,Z</span>), a morphism <span class='cmmi-10'>g </span><span class='cmsy-10'>∘ </span><span class='cmmi-10'>f </span>in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Z</span>),
+     called their <span class='cmbx-10'>composite</span>;
+                                                                                   
+
+                                                                                   
+     </li>
+     <li class='itemize'>for each object <span class='cmmi-10'>X</span>, a morphism id<sub><span class='cmmi-7'>X</span></sub> (or 1<sub><span class='cmmi-7'>X</span></sub>) in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,X</span>), called the <span class='cmbx-10'>identity morphism </span>on
+     <span class='cmmi-10'>X</span>;
+     </li>
+     <li class='itemize'>
+     <!-- l. 48 --><p class='noindent'>such that the following properties are satisfied: </p>
+         <ul class='itemize2'>
+         <li class='itemize'>
+         <!-- l. 50 --><p class='noindent'>composition is <span class='cmbx-10'>associative: </span>for each quadruple <span class='cmmi-10'>W,X,Y,Z </span>of objects, if <span class='cmmi-10'>f </span>is in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>Y,Z</span>), <span class='cmmi-10'>g </span>in
+         <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>) and <span class='cmmi-10'>h </span>in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>W,X</span>), then
+</p>
+         <table class='equation'><tr><td>
+<div class='math-display'>
+<img alt='(f ∘g)∘h = f ∘(g∘ h);
+' class='math-display' src='Category0x.svg' /><a id='x1-2002r1'></a></div>
+         </td><td class='equation-label'>(1)</td></tr></table>
+         <!-- l. 54 --><p class='nopar'>
+         </p></li>
+         <li class='itemize'>
+         <!-- l. 55 --><p class='noindent'>composition satisfies the left and <span class='cmbx-10'>left and right unit laws: </span>For each pair <span class='cmmi-10'>X,Y </span>of objects, if <span class='cmmi-10'>f</span>
+         is in <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>), then
+</p>
+         <table class='equation'><tr><td>
+<div class='math-display'>
+<img alt='1Y ∘ f = f = f ∘1X
+' class='math-display' src='Category1x.svg' /><a id='x1-2003r2'></a></div>
+         </td><td class='equation-label'>(2)</td></tr></table>
+         <!-- l. 59 --><p class='nopar'></p></li></ul>
+                                                                                   
+
+                                                                                   
+     </li></ul>
+   </div>
+<!-- l. 62 --><p class='indent'>
+</p>
+   <div class='newtheorem'>
+<!-- l. 65 --><p class='noindent'><span class='head'>
+<a id='x1-2004r2'></a>
+<span class='cmbx-10'>Notation 1.2.</span>  </span> </p>
+     <ul class='itemize1'>
+     <li class='itemize'>The <span class='cmsy-10'>∈ </span>symbol is often borrowed from the language of set-theory and applied to objects and
+     also morphisms: <span class='cmmi-10'>X </span><span class='cmsy-10'>∈𝒞</span><sub><span class='cmr-7'>0</span></sub> or <span class='cmmi-10'>f </span><span class='cmsy-10'>∈𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>) etc.
+     </li>
+     <li class='itemize'><span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>0</span></sub> is often denoted as <span class='cmmi-10'>Obj</span>(<span class='cmsy-10'>𝒞</span>) and <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>) as Hom<sub><span class='cmsy-7'>𝒞</span></sub>(<span class='cmmi-10'>X,Y </span>).
+     </li>
+     <li class='itemize'>For <span class='cmmi-10'>f </span><span class='cmsy-10'>∈</span> Hom<sub><span class='cmsy-7'>𝒞</span></sub>(<span class='cmmi-10'>X,Y </span>), denote <span class='cmmi-10'>f </span>: <span class='cmmi-10'>X </span><span class='cmsy-10'>→ </span><span class='cmmi-10'>Y</span>
+     </li>
+     <li class='itemize'>If the domain and codomain of a morphism are not relevant or clear from the context, one
+     may write <span class='cmmi-10'>f </span><span class='cmsy-10'>∈𝒞</span><sub><span class='cmr-7'>1</span></sub>. One may say <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub> <span class='cmsy-10'>≡</span> Mor(<span class='cmsy-10'>𝒞</span>) := <span class='cmsy-10'>∪</span><sub><span class='cmmi-7'>X</span><span class='cmsy-7'>∈𝒞</span><sub><span class='cmr-5'>0</span></sub></sub><span class='cmsy-10'>∪</span><sub><span class='cmmi-7'>Y </span><span class='cmsy-7'>∈𝒞</span><sub><span class='cmr-5'>0</span></sub></sub><span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>).</li></ul>
+   </div>
+<!-- l. 73 --><p class='indent'>
+</p>
+   <div class='newtheorem'>
+<!-- l. 76 --><p class='noindent'><span class='head'>
+<a id='x1-2005r3'></a>
+<span class='cmbx-10'>Remark 1.3.</span>  </span> </p>
+     <ul class='itemize1'>
+     <li class='itemize'>A category <span class='cmsy-10'>𝒞</span>, in which <span class='cmsy-10'>𝒞</span><sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>) is a small set (or <span class='cmti-10'>has the size of a small set</span>) instead of a
+     proper class for any pair of objects <span class='cmmi-10'>X,Y </span>is called a <span class='cmbx-10'>locally small </span>category.
+     </li>
+     <li class='itemize'>A category <span class='cmsy-10'>𝒞</span>, in which the collection of objects <span class='cmmi-10'>Obj</span>(<span class='cmsy-10'>𝒞</span>) and the collection of Morphisms Mor(<span class='cmsy-10'>𝒞</span>)
+     is a small set (or <span class='cmti-10'>has the size of a small set</span>) is called a <span class='cmbx-10'>small </span>category.
+                                                                                   
+
+                                                                                   
+     </li>
+     <li class='itemize'>A category <span class='cmsy-10'>𝒞</span>, which is <span class='cmti-10'>not necessarily </span>small is called a <span class='cmbx-10'>large </span>category.</li></ul>
+   </div>
+<!-- l. 83 --><p class='indent'>
+</p><!-- l. 85 --><p class='noindent'>
+</p>
+   <h3 class='sectionHead' id='foundational-issues'><span class='titlemark'>2   </span> <a id='x1-30002'></a>Foundational issues</h3>
+<!-- l. 86 --><p class='noindent'>Def. <a href='#x1-2001r1'>1.1<!-- tex4ht:ref: Def:Category  --></a> refers to <span class='cmti-10'>collections </span>of objects and <span class='cmti-10'>collections </span>of morphisms. In a mathematical foundation with
+proposition-valued equality, Def. <a href='#x1-2001r1'>1.1<!-- tex4ht:ref: Def:Category  --></a> suffices to define a category. This is the case for <span class='cmbx-10'>set </span>theory, <span class='cmbx-10'>class </span>set
+theory or <span class='cmbx-10'>extensional type theory</span>. However, for other foundations - with weaker notions of equality -
+such as <span class='cmbx-10'>homotopy type theory</span>, there are multiple definitions of a category and Def. <a href='#x1-2001r1'>1.1<!-- tex4ht:ref: Def:Category  --></a> is referred to as
+a <span class='cmbx-10'>wild </span>category.
+</p><!-- l. 88 --><p class='noindent'>
+</p>
+   <h3 class='sectionHead' id='size-issues'><span class='titlemark'>3   </span> <a id='x1-40003'></a>Size issues</h3>
+<!-- l. 89 --><p class='noindent'>Another problem arising from the ambiguity of the terms <span class='cmti-10'>collection </span>of objects and <span class='cmti-10'>collection </span>of morphisms
+is the problem of size of these collections. In particular, similar to naive set theory, when one refers to the
+’category of categroies of type <span class='cmmi-10'>T</span>’ <span class='cmbx-10'>Cat</span><sub><span class='cmmi-7'>T</span></sub>, whose <span class='cmti-10'>collection </span>ob objects is ’all’ categories, whose objects form a
+collection <span class='cmti-10'>of type T</span>, then <span class='cmmi-10'>Obj</span>(<span class='cmmi-10'>Cat</span><sub><span class='cmmi-7'>T</span></sub>) itself can not be of type <span class='cmmi-10'>T</span>. I.e. there is no category of all categories;
+or there are categories which become too large to be considered categories, if we were to refine the term
+<span class='cmti-10'>collection </span>in Def. <a href='#x1-2001r1'>1.1<!-- tex4ht:ref: Def:Category  --></a> any further. This size issue may be tackled in several ways; One worth
+outlining here is the approach of using Grothendieck universes. A Grothendieck universe <span class='cmmi-10'>U</span>
+may be thought of as defining a certain universe of mathematical discourse, e.g. <span class='cmmi-10'>U </span>= Set or
+<span class='cmmi-10'>U </span>= Class. For any two universes <span class='cmmi-10'>V </span><span class='cmsy-10'>⊂ </span><span class='cmmi-10'>U</span>, a category is said to be <span class='cmmi-10'>V </span>-small, if its collection of
+objects and morphisms is contained in the universe <span class='cmmi-10'>V </span>, <span class='cmmi-10'>U</span>-large if they are contained in the
+universe <span class='cmmi-10'>U </span>or <span class='cmmi-10'>U</span>-very large if they are not even contained in <span class='cmmi-10'>U</span>. However, even in the latter case,
+the formalism of Gorthendieck universes ensures that there is some containing universe of <span class='cmmi-10'>U</span>,
+such that the considered category can be defined properly if suitable universes of discourse are
+chosen.
+</p><!-- l. 93 --><p class='noindent'>
+</p>
+   <h3 class='sectionHead' id='examples'><span class='titlemark'>4   </span> <a id='x1-50004'></a>Examples</h3>
+<!-- l. 95 --><p class='noindent'>The classic example of a category is <span class='cmbx-10'>Set</span>: </p>
+     <ul class='itemize1'>
+     <li class='itemize'><span class='cmmi-10'>Obj</span>(<span class='cmmi-10'>Set</span>): (Small) Sets
+                                                                                   
+
+                                                                                   
+     </li>
+     <li class='itemize'>Hom<sub>Set</sub>(<span class='cmmi-10'>X,Y </span>): Functions from <span class='cmmi-10'>X </span>to <span class='cmmi-10'>Y</span>
+     </li>
+     <li class='itemize'>The Identity morphism and composition of morphisms are evident.</li></ul>
+<!-- l. 102 --><p class='indent'>   As variations of this example, typical sets with extra structure form categories: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <!-- l. 104 --><p class='noindent'><span class='cmbx-10'>Vect</span><sub><span class='msbm-7'>𝔽</span></sub>  </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(Vect<sub><span class='cmmi-7'>F</span></sub>): Vector Spaces over some field <span class='cmmi-10'>F</span>
+         </li>
+         <li class='itemize'>Vect<sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>): linear functions <span class='cmmi-10'>f </span>: <span class='cmmi-10'>X </span><span class='cmsy-10'>→ </span><span class='cmmi-10'>Y</span>
+         </li>
+         <li class='itemize'>The Identity morphisms and composition of morphisms arise from their Set equivalents</li></ul>
+     </li>
+     <li class='itemize'>
+     <!-- l. 110 --><p class='noindent'><span class='cmbx-10'>Grp</span> </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(Grp): Groups
+         </li>
+         <li class='itemize'>Grp<sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>): group homomorphisms <span class='cmmi-10'>f </span>: <span class='cmmi-10'>X </span><span class='cmsy-10'>→ </span><span class='cmmi-10'>Y</span> </li></ul>
+     </li>
+     <li class='itemize'>
+     <!-- l. 115 --><p class='noindent'><span class='cmbx-10'>Top</span> </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(Top): Topological Spaces
+         </li>
+         <li class='itemize'>Top<sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>X,Y </span>): continuous functions <span class='cmmi-10'>f </span>: <span class='cmmi-10'>X </span><span class='cmsy-10'>→ </span><span class='cmmi-10'>Y</span> </li></ul>
+                                                                                   
+
+                                                                                   
+     </li>
+     <li class='itemize'>
+     <!-- l. 120 --><p class='noindent'><span class='cmbx-10'>Diff</span> </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(Diff): Smooth manifolds
+         </li>
+         <li class='itemize'>Diff<sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>M,N</span>): smooth maps <span class='cmmi-10'>f </span>: <span class='cmmi-10'>M </span><span class='cmsy-10'>→ </span><span class='cmmi-10'>N</span></li></ul>
+     </li>
+     <li class='itemize'>
+     <!-- l. 125 --><p class='noindent'><span class='cmbx-10'>Ring</span> </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(Ring): rings (with unit)
+         </li>
+         <li class='itemize'>Ring<sub><span class='cmr-7'>1</span></sub>(<span class='cmmi-10'>S,R</span>): ring homomorphisms <span class='cmmi-10'>f </span>: <span class='cmmi-10'>S </span><span class='cmsy-10'>→ </span><span class='cmmi-10'>R</span></li></ul>
+     </li></ul>
+<!-- l. 132 --><p class='indent'>   The list can obviously be extended. To generalize above pattern, every structure of universal algebra
+together with their structure preserving homomorphisms forms a category using above patterns. This
+justifies the original motivation for the term <span class='cmti-10'>category</span>: all of the above categories encapsulate one ”kind of
+mathematical structure”. They are also called <span class='cmbx-10'>concrete </span>categories. Apart from concrete categories,
+there are also categories, which roughly model something like ”states” and ”processes” of some
+systems.
+</p>
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <!-- l. 137 --><p class='noindent'><span class='cmbx-10'>Poset</span>: A Poset (partially ordered set) <span class='cmmi-10'>P </span>can be thought of as a category by </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(<span class='cmmi-10'>P</span>): Elements of P
+         </li>
+         <li class='itemize'>Hom<sub><span class='cmmi-7'>P</span></sub>(<span class='cmmi-10'>X,Y </span>): has a morphism if <span class='cmmi-10'>X &lt; Y </span>, no morphism else.
+         </li>
+         <li class='itemize'>Composition of morphisms is obvious (as there is only one choice) and corresponds to
+         transitivity of the <span class='cmmi-10'>&lt; </span>relation.
+                                                                                   
+
+                                                                                   
+         </li>
+         <li class='itemize'>The identity morphism for elements <span class='cmmi-10'>X </span>corresponds to transitivity of <span class='cmmi-10'>&lt;</span>.</li></ul>
+     </li>
+     <li class='itemize'>
+     <!-- l. 144 --><p class='noindent'><span class='cmbx-10'>Group</span>: A Group <span class='cmmi-10'>G </span>can be thought of as a category with one object, where its endomorphisms are
+     the group objects and composition of morphisms is given by the group action. </p>
+         <ul class='itemize2'>
+         <li class='itemize'><span class='cmmi-10'>Obj</span>(<span class='cmmi-10'>G</span>) = <span class='cmsy-10'>{∗}</span>
+         </li>
+         <li class='itemize'>Hom<sub><span class='cmmi-7'>G</span></sub>(<span class='cmsy-10'>∗</span><span class='cmmi-10'>,</span><span class='cmsy-10'>∗</span>) = <span class='cmmi-10'>G </span>(as a set)
+         </li>
+         <li class='itemize'>For <span class='cmmi-10'>f,g </span><span class='cmsy-10'>∈</span> Hom<sub><span class='cmmi-7'>G</span></sub>(<span class='cmsy-10'>∗</span><span class='cmmi-10'>,</span><span class='cmsy-10'>∗</span>), <span class='cmmi-10'>g </span><span class='cmsy-10'>∘ </span><span class='cmmi-10'>f </span>= <span class='cmmi-10'>g </span><span class='cmsy-10'>⋅</span><sub><span class='cmmi-7'>G</span></sub><span class='cmmi-10'>f</span>, where <span class='cmsy-10'>⋅</span><sub><span class='cmmi-7'>G</span></sub> denotes the group action in <span class='cmmi-10'>G</span>.
+         </li>
+         <li class='itemize'>id<sub><span class='cmsy-7'>∗</span></sub> = <span class='cmmi-10'>e</span><sub><span class='cmmi-7'>G</span></sub>, where <span class='cmmi-10'>e</span><sub><span class='cmmi-7'>G</span></sub> denotes the unit element of the group <span class='cmmi-10'>G</span>.</li></ul>
+     </li>
+     <li class='itemize'><span class='cmbx-10'>Monoid</span>: Similar to <span class='cmti-10'>Group</span>: A monoid can be thought of as a category with a single object. Whereas
+     by composition in <span class='cmti-10'>Group</span>, all morphisms are reversible, this is no longer necessarily the case in
+     <span class='cmti-10'>Monoid</span>. The definition works the same though. Conversely, categories may be thought of as a
+     ”many-object version” of monoids.</li></ul>
+    
+</body> 
+</html>

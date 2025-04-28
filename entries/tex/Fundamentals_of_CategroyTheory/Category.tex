@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz-cd}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{needspace}
+\usepackage{tcolorbox}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\ifdefined\HCode%
+   \def\pgfsysdriver{pgfsys-dvisvgm4ht.def}%
+\fi%
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}[definition]{Remark}
+ \newtheorem{notation}[definition]{Notation}
+
+\usepackage{tikz-cd}
+\title{Categories}
+
+\begin{document}
+
+\maketitle
+
+\begin{minipage}{0.4\textwidth}
+    \begin{tcolorbox}
+        \tableofcontents
+    \end{tcolorbox}
+\end{minipage}
+
+\section{Definition}
+\begin{definition}
+    \label{Def:Category}
+    A \textbf{category} $\mathcal{C}$ consists of 
+    \begin{itemize}
+        \item a \textbf{collection} (ToDo: Add discussion of Foundational Size issues) $\mathcal{C}_0$ of \textbf{objects};
+        \item for each pair $X,Y$ of objects a collection $\mathcal{C}_1(X,Y)$ of \textbf{morphisms from} $X$ \textbf{to} $Y$;
+        \item for each pair of morphisms $f$ in $\mathcal{C}_1(X,Y)$ and $g$ in $\mathcal{C}_1(Y,Z)$, a morphism $g \circ f$ in $\mathcal{C}_1(X,Z)$, called their \textbf{composite};
+        \item for each object $X$, a morphism $\text{id}_X$ (or $1_X$) in $\mathcal{C}_1(X,X)$, called the \textbf{identity morphism} on $X$;
+        \item such that the following properties are satisfied:
+        \begin{itemize}
+            \item composition is \textbf{associative:} for each quadruple $W, X, Y, Z$ of objects, if $f$ is in $\mathcal{C}_1(Y,Z)$, $g$ in $\mathcal{C}_1(X,Y)$ and $h$ in $\mathcal{C}_1(W,X)$, then
+            \begin{equation}
+                \label{Eq:CompIsAssoc}
+                (f \circ g) \circ h = f \circ (g \circ h);
+            \end{equation}
+            \item composition satisfies the left and \textbf{left and right unit laws:} For each pair $X,Y$ of objects, if $f$ is in $\mathcal{C}_1(X,Y)$, then 
+            \begin{equation}
+                \label{Eq:CompUnitLaws}
+                1_Y \circ f = f = f \circ 1_X    
+            \end{equation}
+        \end{itemize}
+    \end{itemize}
+\end{definition}
+
+\needspace{3\baselineskip}
+\begin{notation}\leavevmode
+    \label{Not:ObjMorInCat}
+    \begin{itemize}
+        \item The $\in$ symbol is often borrowed from the language of set-theory and applied to objects and also morphisms: $X \in \mathcal{C}_0$ or $f \in \mathcal{C}_1(X,Y)$ etc.
+        \item  $\mathcal{C}_0$ is often denoted as $Obj(\mathcal{C})$ and $\mathcal{C}_1(X,Y)$ as $\text{Hom}_{\mathcal{C}}(X,Y)$.
+        \item For $f \in \text{Hom}_{\mathcal{C}}(X,Y)$, denote $f:X\rightarrow Y$
+        \item If the domain and codomain of a morphism are not relevant or clear from the context, one may write $f \in \mathcal{C}_1$. One may say $\mathcal{C}_1 \equiv \text{Mor}(\mathcal{C}) := {\cup}_{X \in \mathcal{C}_0} {\cup}_{Y \in \mathcal{C}_0} \mathcal{C}_1(X,Y)$.
+    \end{itemize}
+\end{notation}
+
+\needspace{3\baselineskip}
+\begin{remark}\leavevmode
+    \label{Rem:LargeVSmallCat}
+    \begin{itemize}
+        \item A category $\mathcal{C}$, in which $\mathcal{C}_1(X,Y)$ is a small set (or \textit{has the size of a small set}) instead of a proper class for any pair of objects $X,Y$ is called a \textbf{locally small} category.
+        \item A category $\mathcal{C}$, in which the collection of objects $Obj(\mathcal{C})$ and the collection of Morphisms $\text{Mor}(\mathcal{C})$ is a small set (or \textit{has the size of a small set}) is called a \textbf{small} category.
+        \item A category $\mathcal{C}$, which is \textit{not necessarily} small is called a \textbf{large} category.
+    \end{itemize}
+\end{remark}
+
+\section{Foundational issues}
+Def.\,\ref{Def:Category} refers to \textit{collections} of objects and \textit{collections} of morphisms. In a mathematical foundation with proposition-valued equality, Def.\,\ref{Def:Category} suffices to define a category. This is the case for \textbf{set} theory, \textbf{class} set theory or \textbf{extensional type theory}. However, for other foundations - with weaker notions of equality - such as \textbf{homotopy type theory}, there are multiple definitions of a category and Def.\,\ref{Def:Category} is referred to as a \textbf{wild} category.
+
+\section{Size issues}
+Another problem arising from the ambiguity of the terms \textit{collection} of objects and \textit{collection} of morphisms is the problem of size of these collections. In particular, similar to naive set theory, when one refers to the 'category of categroies of type $T$' \textbf{Cat}$_T$, whose \textit{collection} ob objects is 'all' categories, whose objects form a collection \textit{of type T}, then $Obj(Cat_T)$ itself can not be of type $T$. I.e. there is no category of all categories; or there are categories which become too large to be considered categories, if we were to refine the term \textit{collection} in Def.\,\ref{Def:Category} any further. This size issue may be tackled in several ways; One worth outlining here is the approach of using Grothendieck universes. A Grothendieck universe $U$ may be thought of as defining a certain universe of mathematical discourse, e.g. $U=\text{Set}$ or $U=\text{Class}$.
+For any two universes $V \subset U$, a category is said to be $V$-small, if its collection of objects and morphisms is contained in the universe $V$, $U$-large if they are contained in the universe $U$ or $U$-very large if they are not even contained in $U$.
+However, even in the latter case, the formalism of Gorthendieck universes ensures that there is some containing universe of $U$, such that the considered category can be defined properly if suitable universes of discourse are chosen. 
+
+\section{Examples}
+
+The classic example of a category is \textbf{Set}:
+\begin{itemize}
+    \item $Obj(Set)$: (Small) Sets
+    \item $\text{Hom}_{\text{Set}}(X,Y)$: Functions from $X$ to $Y$
+    \item The Identity morphism and composition of morphisms are evident. 
+\end{itemize}
+
+As variations of this example, typical sets with extra structure form categories:
+\begin{itemize}
+    \item \textbf{Vect}$_{\mathbb{F}}$
+    \begin{itemize}
+        \item $Obj(\text{Vect}_F)$: Vector Spaces over some field $F$
+        \item $\text{Vect}_1(X,Y)$: linear functions $f: X \rightarrow Y$
+        \item The Identity morphisms and composition of morphisms arise from their Set equivalents
+    \end{itemize}
+    \item \textbf{Grp}
+    \begin{itemize}
+        \item $Obj(\text{Grp})$: Groups
+        \item $\text{Grp}_1(X,Y)$: group homomorphisms $f: X \rightarrow Y$
+    \end{itemize}
+    \item \textbf{Top}
+    \begin{itemize}
+        \item $Obj(\text{Top})$: Topological Spaces
+        \item $\text{Top}_1(X,Y)$: continuous functions $f: X \rightarrow Y$
+    \end{itemize}
+    \item \textbf{Diff}
+    \begin{itemize}
+        \item $Obj(\text{Diff})$: Smooth manifolds
+        \item $\text{Diff}_1(M,N)$: smooth maps $f: M \rightarrow N$
+    \end{itemize}
+    \item \textbf{Ring}
+    \begin{itemize}
+        \item $Obj(\text{Ring})$: rings (with unit)
+        \item $\text{Ring}_1(S, R)$: ring homomorphisms $f: S \rightarrow R$
+    \end{itemize}
+\end{itemize}
+
+The list can obviously be extended. To generalize above pattern, every structure of universal algebra together with their structure preserving homomorphisms forms a category using above patterns.
+This justifies the original motivation for the term \textit{category}: all of the above categories encapsulate one "kind of mathematical structure". They are also called \textbf{concrete} categories.
+Apart from concrete categories, there are also categories, which roughly model something like "states" and "processes" of some systems.
+
+\begin{itemize}
+    \item \textbf{Poset}: A Poset (partially ordered set) $P$ can be thought of as a category by
+    \begin{itemize}
+        \item $Obj(P)$: Elements of P
+        \item $\text{Hom}_P(X,Y)$: has a morphism if $X < Y$, no morphism else.
+        \item Composition of morphisms is obvious (as there is only one choice) and corresponds to transitivity of the $ < $ relation.
+        \item The identity morphism for elements $X$ corresponds to transitivity of $ < $.
+    \end{itemize}
+    \item \textbf{Group}: A Group $G$ can be thought of as a category with one object, where its endomorphisms are the group objects and composition of morphisms is given by the group action.
+    \begin{itemize}
+        \item $Obj(G)$ = $\{*\}$
+        \item $\text{Hom}_G(*, *) = G$ (as a set)
+        \item For $f, g \in \text{Hom}_G(*,*)$, $g\circ f = g \cdot_G f$, where $\cdot_G$ denotes the group action in $G$.
+        \item $\text{id}_* = e_G$, where $e_G$ denotes the unit element of the group $G$. 
+    \end{itemize}
+    \item \textbf{Monoid}: Similar to \textit{Group}: A monoid can be thought of as a category with a single object. Whereas by composition in \textit{Group}, all morphisms are reversible, this is no longer necessarily the case in \textit{Monoid}. The definition works the same though. Conversely, categories may be thought of as a "many-object version" of monoids.
+\end{itemize}
+
+
+
+
+\end{document}
